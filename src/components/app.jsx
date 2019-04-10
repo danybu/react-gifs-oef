@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       selectedGif: "3oFzma9FGIblOf6Wk0",
       lookedUpGifs: [
-        { id: '7EeyCdPpCwrJhJnxLs' },
+        // { id: '7EeyCdPpCwrJhJnxLs' },
         { id: 'SQD2LlZy731O8' }
       ]
     };
@@ -19,8 +19,8 @@ class App extends Component {
   search = (query) => {
     giphy('d3J9eVZupzuEqbNjQbWrQlcmcNEKHmvU').search({
       q: query,
-      rating: 'g',
-      limit: 8,
+      rating: 'r',
+      limit: 50,
     }, (error, result) => {
       this.setState({
         lookedUpGifs: result.data
